@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - MVA AVOCATS | Cabinet d'avocats à Paris</title>
+    <meta name="description" content="Contactez MVA AVOCATS : formulaire de contact, coordonnées complètes, adresse à Paris. Cabinet d'avocats disponible pour vos consultations juridiques.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+            <div class="container">
+                <div class="logo">
+                    <img src="logo-mva.png" alt="MVA AVOCATS - Cabinet d'avocats à Paris" width="150" height="50">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="presentation.html">Le cabinet</a></li>
+                    <li><a href="equipe.html">Équipe</a></li>
+                    <li><a href="domaines.html">Domaines d'intervention</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Ouvrir le menu de navigation mobile" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <div class="nav-overlay"></div>
+    </header>
+
+    <main id="main-content" role="main">
+        <!-- Section Contact -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Informations de Contact -->
+                    <div class="contact-info-section">
+                        <h2>Nos Coordonnées</h2>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Adresse</h3>
+                                <p>6 rue Anatole de la Forge<br>75017 Paris, France</p>
+                                <p class="contact-note">Métro : Ternes (ligne 2)<br>RER : Charles de Gaulle - Étoile (ligne A)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Téléphone</h3>
+                                <p><a href="tel:0142961234">01 42 96 12 34</a></p>
+                                <p class="contact-note">Lun–Ven : 9h00 - 19h00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p><a href="mailto:contact@mva-avocats.fr">contact@mva-avocats.fr</a></p>
+                                <p class="contact-note">Réponse sous 24h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Horaires</h3>
+                                <p>Lundi - Vendredi : 9h00 - 19h00</p>
+                                <p class="contact-note">Consultations sur rendez-vous</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Informations Légales</h3>
+                                <p><strong>SIREN :</strong> 920 818 804</p>
+                                <p><strong>TVA :</strong> FR20 920818804</p>
+                                <p class="contact-note">Avocats inscrits au Barreau de Paris</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Formulaire de Contact -->
+                    <div class="contact-form-section">
+                        <h2>Nous Écrire</h2>
+                        <p>Remplissez ce formulaire et nous vous répondrons dans les plus brefs délais.</p>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="nom">Nom *</label>
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="prenom">Prénom *</label>
+                                <input type="text" id="prenom" name="prenom" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telephone">Téléphone</label>
+                                <input type="tel" id="telephone" name="telephone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="domaine">Domaine Juridique *</label>
+                                <select id="domaine" name="domaine" required>
+                                    <option value="">Choisissez un domaine</option>
+                                    <option value="societes">Droit des Sociétés & Affaires</option>
+                                    <option value="credit">Droit du Crédit & Garanties</option>
+                                    <option value="contentieux">Contentieux Civil & Commercial</option>
+                                    <option value="etrangers">Droit des Étrangers</option>
+                                    <option value="autre">Autre domaine</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="sujet">Sujet *</label>
+                                <input type="text" id="sujet" name="sujet" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Décrivez votre situation et vos besoins..."></textarea>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="rgpd" name="rgpd" required>
+                                <label for="rgpd">J'accepte que mes données soient traitées conformément à la <a href="politique-confidentialite.html" target="_blank">politique de confidentialité</a> *</label>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Je souhaite recevoir la newsletter avec les actualités juridiques</label>
+                            </div>
+                            
+                            <button type="submit" class="btn-submit">
+                                <i class="fas fa-paper-plane"></i>
+                                Envoyer le Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Plan d'Accès -->
+        <section class="map-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Plan d'Accès</h2>
+                    <p>Comment nous rejoindre dans le 17ème arrondissement de Paris</p>
+                </div>
+                
+                <div class="map-content">
+                    <div class="map-info">
+                        <h3>Accès en Transport</h3>
+                        <div class="transport-options">
+                            <div class="transport-item">
+                                <i class="fas fa-subway"></i>
+                                <div>
+                                    <strong>Métro :</strong> Ternes (ligne 2)
+                                </div>
+                            </div>
+                            <div class="transport-item">
+                                <i class="fas fa-train"></i>
+                                <div>
+                                    <strong>RER :</strong> Charles de Gaulle - Étoile (ligne A)
+                                </div>
+                            </div>
+                            <div class="transport-item">
+                                <i class="fas fa-bus"></i>
+                                <div>
+                                    <strong>Bus :</strong> Lignes 30, 31, 43, 93
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3>Parking à Proximité</h3>
+                        <ul>
+                            <li>Parking Ternes (avenue des Ternes)</li>
+                            <li>Parking Wagram (avenue de Wagram)</li>
+                            <li>Parking Arc de Triomphe (place Charles de Gaulle)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.6!2d2.301!3d48.8744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f7c4198c7%3A0x123456789!2s6%20Rue%20Anatole%20de%20la%20Forge%2C%2075017%20Paris!5e0!3m2!1sfr!2sfr!4v1693834567890"
+                            width="100%" 
+                            height="400" 
+                            style="border:0; border-radius: var(--border-radius-lg);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Localisation MVA AVOCATS - 6 rue Anatole de la Forge, 75017 Paris">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Prêt à nous rencontrer ?</h2>
+                <p>Prenez rendez-vous pour une consultation personnalisée</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary">Voir nos Tarifs</a>
+                    <a href="tel:0142961234" class="btn-secondary">Appeler Maintenant</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo-mva.png" alt="MVA AVOCATS Logo" width="120">
+                    <p>Cabinet d'avocats au Barreau de Paris</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                        <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>6 rue Anatole de la Forge<br>75017 Paris</p>
+                    <p>📧 contact@mva-avocats.fr<br>📞 01 42 96 12 34</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MVA AVOCATS - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

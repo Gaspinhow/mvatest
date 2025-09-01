@@ -1,0 +1,27 @@
+<svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="100" fill="white"/>
+  
+  <!-- Horizontal double line -->
+  <line x1="20" y1="50" x2="280" y2="50" stroke="#1e3a8a" stroke-width="2"/>
+  <line x1="20" y1="52" x2="280" y2="52" stroke="#1e3a8a" stroke-width="1"/>
+  
+  <!-- Text on the left -->
+  <text x="25" y="45" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#1e3a8a" text-transform="uppercase" letter-spacing="1">AVOCATS AU BARREAU DE PARIS</text>
+  
+  <!-- Circular emblem on the right -->
+  <circle cx="250" cy="50" r="35" fill="#1e3a8a"/>
+  
+  <!-- MVA initials in the circle -->
+  <g fill="white">
+    <!-- M -->
+    <path d="M235 35 L235 45 L238 40 L241 45 L241 35 L239 35 L239 42 L238 40 L237 42 L237 35 Z"/>
+    <!-- V -->
+    <path d="M243 35 L243 45 L245 40 L247 35 L245 40 L243 45 Z"/>
+    <!-- A -->
+    <path d="M249 35 L249 45 L251 35 L253 45 L251 40 L249 40 L251 35 Z"/>
+  </g>
+  
+  <!-- AVOCATS text below initials -->
+  <text x="235" y="60" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="white" text-transform="uppercase">AVOCATS</text>
+</svg> 

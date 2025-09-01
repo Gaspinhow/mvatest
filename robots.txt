@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.mva-avocats.fr/sitemap.xml
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /private/
+
+# Allow important pages
+Allow: /index.html
+Allow: /presentation.html
+Allow: /equipe.html
+Allow: /domaines.html
+Allow: /honoraires.html
+Allow: /articles.html
+Allow: /contact.html
+Allow: /mentions-legales.html
+Allow: /politique-confidentialite.html
+
+# Crawl delay
+Crawl-delay: 1 
