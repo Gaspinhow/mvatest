@@ -135,6 +135,11 @@ Ce document détaille toutes les améliorations apportées au site MVA AVOCATS p
 - **Back to top** : Bouton de retour en haut
 - **Notifications** : Système de feedback
 - **Form validation** : Validation en temps réel
+- **Blog complet** : Articles individuels avec commentaires
+- **Système de commentaires** : Likes, réponses, modération
+- **FAQ interactive** : Recherche et catégories
+- **Design system** : Composants réutilisables
+- **Partage social** : Intégration réseaux sociaux
 
 ## 🚀 Déploiement
 
