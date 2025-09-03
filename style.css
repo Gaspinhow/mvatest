@@ -1,5 +1,22 @@
-/* ===== MVA AVOCATS - STYLE SHEET ===== */
+/* ===== MVA AVOCATS - STYLE SHEET OPTIMISÉ ===== */
 /* ===== DESIGN EAK-AVOCAT.FR + LOGO MVA ===== */
+
+/* ===== OPTIMISATIONS DE PERFORMANCE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Optimisation des transitions pour de meilleures performances */
+* {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Désactiver les transitions sur les éléments qui n'en ont pas besoin */
+img, video, canvas, svg {
+    transition: none;
+}
 
 /* ===== VARIABLES CSS ===== */
 :root {
@@ -33,10 +50,11 @@
     --shadow-xl: 0 20px 25px -5px var(--shadow-color), 0 10px 10px -5px var(--shadow-color);
     --shadow-colored: 0 10px 25px -5px rgba(220, 38, 38, 0.2);
     
-    /* Transitions */
-    --transition-fast: 0.15s ease-in-out;
-    --transition-normal: 0.3s ease-in-out;
-    --transition-slow: 0.5s ease-in-out;
+    /* Transitions optimisées */
+    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     
     /* Typographie */
     --font-heading: 'Playfair Display', serif;
@@ -50,17 +68,186 @@
     --spacing-xl: 3rem;
     --spacing-2xl: 4rem;
     --spacing-3xl: 6rem;
+    
+    /* Border radius */
+    --border-radius: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+}
+
+/* ===== ANIMATIONS FLUIDES ET PERFORMANTES ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: calc(200px + 100%) 0;
+    }
+}
+
+/* ===== CLASSES D'ANIMATION UTILITAIRES ===== */
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fade-in-left {
+    animation: fadeInLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fade-in-right {
+    animation: fadeInRight 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-slide-in-up {
+    animation: slideInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ===== EFFETS DE HOVER AVANCÉS ===== */
+.hover-lift {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(15, 76, 129, 0.15);
+}
+
+.hover-scale {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-glow {
+    transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.3);
+}
+
+/* ===== LOADING STATES ===== */
+.loading-shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200px 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* ===== SCROLL INDICATOR ===== */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+    z-index: 1001;
+    transition: width 0.1s ease;
+}
+
+/* ===== RESPONSIVE DESIGN OPTIMISÉ ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 /* ===== RESET & BASE ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
@@ -68,6 +255,14 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--secondary-color);
+    overflow-x: hidden;
+}
+
+/* Amélioration du rendu des polices */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 /* ===== CONTAINER ===== */
@@ -88,18 +283,23 @@ body {
     color: var(--secondary-color);
 }
 
-
-
 /* ===== NAVIGATION PRINCIPALE ===== */
 .main-nav {
-    background: var(--primary-color);
+    background: rgba(15, 76, 129, 0.95);
     padding: 1.25rem 0;
     width: 100%;
     box-shadow: var(--shadow-lg);
     position: sticky;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-nav.scrolled {
+    background: rgba(15, 76, 129, 0.98);
+    padding: 1rem 0;
+    box-shadow: 0 8px 32px rgba(15, 76, 129, 0.2);
 }
 
 .main-nav .container {
@@ -266,18 +466,45 @@ body {
 .expertise-item {
     text-align: center;
     padding: 2.5rem 2rem;
-    background: var(--white);
+    background: var(--secondary-color);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-md);
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.expertise-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
 }
 
 .expertise-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(15, 76, 129, 0.2);
     border-color: var(--primary-color);
-    background: linear-gradient(135deg, var(--white) 0%, var(--background-light) 100%);
+    color: var(--secondary-color);
+}
+
+.expertise-item:hover::before {
+    opacity: 0.05;
+}
+
+.expertise-item:hover h3 {
+    color: var(--primary-color);
+}
+
+.expertise-item:hover p {
+    color: var(--text-light);
 }
 
 .expertise-item h3 {
@@ -347,6 +574,16 @@ body {
     object-fit: cover;
     object-position: center;
     filter: grayscale(30%) contrast(110%);
+    animation: heroZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }
 
 .hero-overlay {
@@ -592,37 +829,64 @@ body {
 .btn-primary, .btn-secondary {
     display: inline-block;
     padding: var(--spacing-md) var(--spacing-xl);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     text-decoration: none;
     font-weight: 600;
-    transition: var(--transition-normal);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
 }
 
 .btn-primary {
     background: var(--gradient-accent);
     color: var(--secondary-color);
     box-shadow: var(--shadow-colored);
-    border: 2px solid var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
 }
 
 .btn-primary:hover {
     background: var(--accent-light);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(220, 38, 38, 0.3);
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
 }
 
 .btn-secondary {
     background: transparent;
     color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 .btn-secondary:hover {
     background: var(--primary-color);
     color: var(--secondary-color);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(15, 76, 129, 0.3);
+}
+
+.btn-secondary:active {
+    transform: translateY(-1px);
 }
 
 /* ===== CREDIBILITY BANNER ===== */
