@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 // Images du cabinet avec Arc de Triomphe
 const slides = [
   "/images/vue-horizontale-arc-triomphe.jpg",
-  "/images/cour-cassation.jpg",
-  "/images/tribunal-paris.jpg",
+  "/images/hero-bureau.jpg",
+  "/images/equipe-collaboration.jpg",
 ];
 
 export default function Hero() {
