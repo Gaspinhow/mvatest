@@ -13,7 +13,7 @@ Ce site est configuré pour être déployé automatiquement sur GitHub Pages via
    git add .
    git commit -m "Initial commit - MVA Avocats site"
    git branch -M main
-   git remote add origin https://github.com/VOTRE_USERNAME/Shrek3.git
+   git remote add origin https://github.com/Gaspinhow/mvatest.git
    git push -u origin main
    ```
 
@@ -23,7 +23,7 @@ Ce site est configuré pour être déployé automatiquement sur GitHub Pages via
    - Workflow: "Deploy to GitHub Pages"
 
 3. **Le site sera accessible à :**
-   - `https://VOTRE_USERNAME.github.io/Shrek3/`
+   - `https://gaspinhow.github.io/mvatest/`
    - Ou avec un domaine personnalisé : `https://www.mva-avocats.fr`
 
 ## 🛠️ Développement local

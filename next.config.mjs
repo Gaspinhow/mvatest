@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/Shrek3' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/Shrek3' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/mvatest' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/mvatest' : '',
   experimental: {
     optimizePackageImports: ['framer-motion'],
   },
