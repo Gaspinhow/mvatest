@@ -1,56 +1,77 @@
-# 🏛️ MVA AVOCATS - Site Web Officiel
+# MVA AVOCATS - Site Web Professionnel
 
-Site web professionnel du cabinet d'avocats MVA AVOCATS, spécialisé en droit des sociétés, crédits et garanties, contentieux civil et droit des étrangers.
+Site web moderne du cabinet d'avocats MVA AVOCATS, développé avec Next.js, React et Tailwind CSS.
 
-## 🌐 Site en Ligne
+## 🌐 Déploiement GitHub Pages
 
-**URL :** https://[votre-username].github.io/mvatest/
+Ce site est configuré pour être déployé automatiquement sur GitHub Pages via GitHub Actions.
 
-## 📋 Informations du Cabinet
+### 🚀 Instructions de déploiement
 
-- **Nom :** MVA AVOCATS
-- **Forme :** SELAS (Société d'exercice libéral par actions simplifiée)
-- **Création :** 1er octobre 2022
-- **Adresse :** 6 rue Anatole de la Forge, 75017 Paris
-- **Téléphone :** 01 42 96 12 34
-- **Email :** contact@mva-avocats.fr
+1. **Publier le repository sur GitHub**
+   ```bash
+   git add .
+   git commit -m "Initial commit - MVA Avocats site"
+   git branch -M main
+   git remote add origin https://github.com/VOTRE_USERNAME/Shrek3.git
+   git push -u origin main
+   ```
 
-## 🎯 Domaines d'Expertise
+2. **Activer GitHub Pages**
+   - Aller dans Settings → Pages
+   - Source: GitHub Actions
+   - Workflow: "Deploy to GitHub Pages"
 
-- **Droit des sociétés & affaires**
-- **Droit du crédit, garanties & exécution**
-- **Procédures civiles & contentieux**
-- **Droit des étrangers & nationalité**
+3. **Le site sera accessible à :**
+   - `https://VOTRE_USERNAME.github.io/Shrek3/`
+   - Ou avec un domaine personnalisé : `https://www.mva-avocats.fr`
 
-## 🛠️ Technologies Utilisées
+## 🛠️ Développement local
 
-- **HTML5** - Structure sémantique
-- **CSS3** - Design moderne et responsive
-- **JavaScript** - Interactivité et animations
-- **Google Fonts** - Typographie professionnelle
-- **Font Awesome** - Icônes
-- **Google Maps** - Localisation interactive
+```bash
+# Installation des dépendances
+npm install
 
-## 📱 Fonctionnalités
+# Démarrage du serveur de développement
+npm run dev
 
-- ✅ **Design responsive** - Mobile-first
-- ✅ **Navigation moderne** - Menu burger élégant
-- ✅ **SEO optimisé** - Meta tags, Open Graph, Twitter Cards
-- ✅ **Accessibilité** - WCAG 2.1 AA
-- ✅ **Performance** - Chargement rapide
-- ✅ **Carte interactive** - Google Maps intégrée
-- ✅ **Formulaire de contact** - Envoi direct par email
+# Build pour production
+npm run build
 
-## 🚀 Déploiement
+# Export statique pour GitHub Pages
+npm run export
+```
 
-Ce site est déployé via **GitHub Pages** et accessible en ligne.
+## 📁 Structure du projet
 
-## 📞 Contact
+- `app/` - Pages Next.js (App Router)
+- `components/` - Composants React réutilisables
+- `public/` - Assets publics (images, logos)
+- `.github/workflows/` - Configuration GitHub Actions
 
-Pour toute question technique ou modification :
-- **Développeur :** [Votre nom]
-- **Cabinet :** contact@mva-avocats.fr
+## 🎨 Technologies utilisées
+
+- **Next.js 14** - Framework React
+- **Tailwind CSS** - Framework CSS
+- **Framer Motion** - Animations
+- **React 18** - Interface utilisateur
+
+## 📱 Responsive & Accessibilité
+
+Le site est entièrement responsive et optimisé pour :
+- Desktop, tablette et mobile
+- Accessibilité web (WCAG)
+- Performance et SEO
+- Images optimisées
+
+## 🔧 Configuration
+
+Le projet utilise :
+- Export statique pour GitHub Pages (`output: 'export'`)
+- Images optimisées sans serveur (`unoptimized: true`)
+- Base path configuré pour le sous-répertoire GitHub Pages
 
 ---
 
-*Site développé avec soin pour représenter l'excellence et le professionnalisme du cabinet MVA AVOCATS.* 
+**Cabinet MVA AVOCATS** - 6 rue Anatole de la Forge, 75017 Paris
+Site développé avec ❤️ par un assistant IA pour l'excellence juridique.
